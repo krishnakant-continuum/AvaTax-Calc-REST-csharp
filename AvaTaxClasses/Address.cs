@@ -2,6 +2,8 @@
 {
     using System;
 
+    // Since the AddressType comes from the content, it is safer to serialize it as a string.
+    // These common values are still included in this sample for your information only.
     public enum AddressType
     {
         F, // Firm or company address
@@ -40,7 +42,7 @@
 
         public string PostNet { get; set; } // Output for ValidateAddress only
 
-        public AddressType? AddressType { get; set; } // Output for ValidateAddress only
+        public string AddressType { get; set; } // Output for ValidateAddress only
 
         public decimal? Latitude { get; set; } // Input for GetTax only
 
